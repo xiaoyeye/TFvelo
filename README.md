@@ -14,10 +14,10 @@ matplotlib.
 
 
 The demo dataset Pancreas can be load by:
-'
+'''
 import TFvelo as TFv
 adata = TFv.datasets.pancreas()
-'
+'''
 
 To test TFvelo on pancreas:
 '
