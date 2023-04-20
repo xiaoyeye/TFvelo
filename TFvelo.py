@@ -209,7 +209,7 @@ def main(args):
 if __name__ == '__main__':
     import argparse
     parser = argparse.ArgumentParser()
-    parser.add_argument( '--dataset_name', type=str, default="pancreas", help='pancreas, scNT_seq, merfish, bonemarrow') 
+    parser.add_argument( '--dataset_name', type=str, default="pancreas", help='pancreas, gastrulation_erythroid, merfish, hesc1') 
     parser.add_argument( '--preprocessing', type=int, default=0, help='preprocessing')
     parser.add_argument( '--n_jobs', type=int, default=16, help='n_jobs')
     parser.add_argument( '--var_names', type=str, default="all", help='all, highly_variable_genes')
