@@ -8,8 +8,8 @@ import matplotlib
 matplotlib.use('AGG')
 
 import os, sys
-rootPath = os.path.dirname(sys.path[0])
-os.chdir(rootPath+'/RNA_velocity')
+#rootPath = os.path.dirname(sys.path[0])
+#os.chdir(rootPath+'/RNA_velocity')
 
 def check_data_type(adata):
     for key in list(adata.var):
@@ -59,7 +59,7 @@ def batch_correction(adata, batch_corr_method, batch_keys):
 def preprocessing(args):
     print('----------------------------------Preprocessing',args.dataset_name,'---------------------------------------------')
     if args.dataset_name == 'pancreas':
-        adata = ad.read_h5ad("data/pancreas/endocrinogenesis_day15.h5ad") #adata = TFv.datasets.pancreas()
+        adata = TFv.datasets.pancreas() #ad.read_h5ad("data/pancreas/endocrinogenesis_day15.h5ad") 
 
     elif args.dataset_name == 'gastrulation_erythroid':
         adata = TFv.datasets.gastrulation_erythroid()   
