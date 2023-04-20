@@ -14,20 +14,20 @@ matplotlib.
 
 
 The demo dataset Pancreas can be load by:
-
+'
 import TFvelo as TFv
 adata = TFv.datasets.pancreas()
-
+'
 
 To test TFvelo on pancreas:
-
+'
 python TFvelo.py --dataset_name pancreas
-
+'
 This will automatically download, preprocess and run TF model on pancrease dataset. The result will be stored in 'TFvelo_pancreas/rc.h5ad'.
 
 
 After that, the visualization of results can be obtained by 
-
+'
 python TFvelo_analysis.py --dataset_name pancreas
-
+'
 The result will be stored in 'TFvelo_pancreas/analysis.h5ad', and figures will be put in folder 'figures'
