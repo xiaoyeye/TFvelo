@@ -169,7 +169,7 @@ def weight_analysis(adata):
 
 
 def main(args):
-    adata = anndata.read_h5ad(args.data_path+"rc.h5ad") 
+    adata = ad.read_h5ad(args.data_path+"rc.h5ad") 
     adata.var_names_make_unique()
     num_cell, num_gene = adata.X.shape[0], adata.X.shape[1]
     check_data_type(adata)
@@ -266,7 +266,7 @@ def main(args):
     for show_gene in show_genes_main:
         #TFv.pl.scatter(adata, basis=show_gene, ncols=4, frameon=False, save=show_gene+'_WX_y.png')
         TFv.pl.velocity(adata, show_gene, ncols=2, add_outline=True, layers='na', dpi=300, fontsize=15, save=show_gene+'_WX_y.png') #layers='all'
-        TFv.pl.scatter(adata, x='velocity_pseudotime', y=show_gene, ncols=4, frameon=True, fontsize=20, xlabel='t', ylabel='expression', fontsize=20, save=show_gene+'_y_t.png')
+        TFv.pl.scatter(adata, x='velocity_pseudotime', y=show_gene, ncols=4, frameon=True, fontsize=20, xlabel='t', ylabel='expression', save=show_gene+'_y_t.png')
         TFv.pl.velocity(adata, show_gene, ncols=2, add_outline=True, layers=[args.layer], fontsize=15, dpi=300, save=show_gene+'_info.png') #layers='all'
 
     TFv.tl.velocity_confidence(adata)
@@ -276,6 +276,8 @@ def main(args):
     np.savetxt('figures/TFvelo_'+args.dataset_name+'_velocity_confidence.txt', np.array(adata.obs['velocity_confidence']))
 
     data_type_tostr(adata)
+    if 'fit_refit_flags' in adata.var:
+        del adata.var['fit_refit_flags']
     adata.write(args.data_path + 'analysis.h5ad')
 
     return
@@ -287,7 +289,7 @@ def main(args):
 if __name__ == '__main__':
     import argparse
     parser = argparse.ArgumentParser()
-    parser.add_argument( '--dataset_name', type=str, default="merfish", help='pancreas, scNT_seq, merfish, hesc1, mesc2, gastrulation_erythroid') 
+    parser.add_argument( '--dataset_name', type=str, default="gastrulation_erythroid", help='pancreas,  merfish, hesc1, gastrulation_erythroid') 
     parser.add_argument( '--layer', type=str, default="M_total", help='M_total, total') 
     parser.add_argument( '--basis', type=str, default="umap", help='umap, tsne, pca')
     parser.add_argument( '--n_bins', type=int, default=32, help='n_bins in stream')
