@@ -1,25 +1,19 @@
 from cmath import isnan
 import TFvelo as TFv
 from TFvelo.preprocessing.moments import get_connectivities
-import pandas as pd
 import anndata as ad
 import scanpy as sc
-import muon as mu
-from muon import atac as ac
 import numpy as np
-import anndata
-import shutil
 
 import matplotlib
 matplotlib.use('AGG')
 import matplotlib.pyplot as plt
 
 from sklearn.cluster import KMeans, DBSCAN, AgglomerativeClustering, AffinityPropagation
-from sklearn import metrics
 
 import os, sys
-rootPath = os.path.dirname(sys.path[0])
-os.chdir(rootPath+'/RNA_velocity')
+#rootPath = os.path.dirname(sys.path[0])
+#os.chdir(rootPath+'/RNA_velocity')
 
 MOUSE_DATA = ['pancreas', 'mesc2', 'mesc1', 'dentategyrus', 'gastrulation_erythroid', 'scNT_seq']
 HUMAN_DATA = ['hesc1', 'hesc2', 'bonemarrow', 'merfish']
