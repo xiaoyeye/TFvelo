@@ -23,7 +23,7 @@ To test TFvelo on pancreas:
 ```
 python TFvelo.py --dataset_name pancreas
 ```
-This will automatically download, preprocess and run TF model on pancrease dataset. The result will be stored in 'TFvelo_pancreas/rc.h5ad'.
+This will automatically download, preprocess and run TF model on pancrease dataset. These processes may take 1-2 hours on a linux server with more than 16 CPUs. The result will be stored in 'TFvelo_pancreas/rc.h5ad'.
 
 
 After that, the visualization of results can be obtained by 
