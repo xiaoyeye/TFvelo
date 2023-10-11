@@ -46,9 +46,9 @@ def get_TFs(data, databases, copy=False):
     all_TFs = []
 
     if 'all' in databases:
-        with open("data/TF_names_v_1.01.txt", "r") as f:  # 打开文件
+        with open("data/TF_names_v_1.01.txt", "r") as f:  
             for line in f.readlines():
-                TF_name = line.strip('\n')  #去掉列表中每一个元素的换行符
+                TF_name = line.strip('\n') 
                 if not TF_name in gene_names:
                     continue
                 if not TF_name in all_TFs:
