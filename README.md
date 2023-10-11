@@ -7,6 +7,7 @@ This is the code of TFvelo, which is developed based on the implementation of sc
 Environment:
 ```
 conda create -n TFvelo_env python=3.8.12
+conda activate TFvelo_env
 pip install pandas==1.2.3 
 pip install anndata==0.8.0 
 pip install scanpy==1.8.2
@@ -18,23 +19,28 @@ pip install scvelo==0.2.4
 pip install typing_extensions
 ```
 
-The demo dataset Pancreas can be load by:
+Reproduce:
+To reproduce TFvelo on pancreas:
 ```
-import TFvelo as TFv
-adata = TFv.datasets.pancreas()
+python TFvelo_run_demo.py --dataset_name pancreas
 ```
-
-To test TFvelo on pancreas:
-```
-python TFvelo.py --dataset_name pancreas
-```
-This will automatically download, preprocess and run TF model on pancrease dataset. These processes may take 1-2 hours on a linux server with more than 16 CPUs. The result will be stored in 'TFvelo_pancreas/rc.h5ad'.
+This will automatically download, preprocess and run TF model on pancrease dataset. The result will be stored in 'TFvelo_pancreas/rc.h5ad'.
 
 
 After that, the visualization of results can be obtained by 
 ```
-python TFvelo_analysis.py --dataset_name pancreas
+python TFvelo_analysis_demo.py --dataset_name pancreas
 ```
-The result will be stored in 'TFvelo_pancreas/analysis.h5ad', and figures will be put in folder 'figures'.
+The result will be stored in 'TFvelo_pancreas/TFvelo.h5ad', and figures will be put in folder 'figures'.
 
 Running the program with default parameters can reproduce the results in manuscript.
+
+
+To apply TFvelo to other single cell data:
+you can use a personalized name for the dataset by :
+--dataset_name your_data_name 
+
+and simply change the data loader in preprocess() function as:
+adata = ad.read_h5ad(h5ad_file_path)   
+
+As a result, all results will be puted in the folder $"TFvelo_"+your_data_name+"_demo"$
