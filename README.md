@@ -62,14 +62,14 @@ As a result, all generated h5ad files will be puted in the folder named: "TFvelo
 
 ## Hyperparameters:
 ```
---n_jobs: number of cpus to use
---init_weight_method: the method to initialize the weights. Correlation is adopted by default.
---WX_method: the method to optimize weight. lsq_linear is adopted by default.
---n_neighbors: number of neighbors.
+--n_jobs: The number of cpus to use
+--init_weight_method: The method to initialize the weights. Correlation is adopted by default.
+--WX_method: The method to optimize weight. lsq_linear is adopted by default.
+--n_neighbors: The number of neighbors.
 --WX_thres: The max absolute value for weights.
---TF_databases: The way to select candidate TFs. use ENCODE and ChEA by default.
---max_n_TF: max number of TFs used for modeling each gene.
---max_iter: max number of iterations in the generalized EM algorithm.
---n_time_points: the number of time points in the time assinment (E step of the generalized EM algorithm). 
---save_name: the name of folder which all generated files will be put in.
+--TF_databases: The way to select candidate TFs. Use ENCODE and ChEA by default.
+--max_n_TF: Max number of TFs used for modeling each gene.
+--max_iter: Max number of iterations in the generalized EM algorithm.
+--n_time_points: The number of time points in the time assinment (E step of the generalized EM algorithm). 
+--save_name: The name of folder which all generated files will be put in.
 ```
