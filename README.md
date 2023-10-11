@@ -10,8 +10,11 @@ In TFvelo, the gene regulatory relationship is taken into consideration for mode
 ![Image text](https://github.com/xiaoyeye/TFvelo/blob/main/figures/demo.png)
 
 TFvelo_run_demo.py provides the demo for runing TFvelo, and TFvelo_analysis_demo.py is for results visualization. The package TFvelo can be directly downloaded for usage.
+
 Please decompress the ENCODE TF-target database file firstly after downloading this package. On linux, you can run: 
+```
 unzip ENCODE.zip
+```
 
 ## Environment:
 ```
