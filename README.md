@@ -50,9 +50,9 @@ The result will be stored in 'TFvelo_pancreas_demo/TFvelo.h5ad', and figures wil
 
 
 ## Usage:
-To apply TFvelo to other single cell data:
+To apply TFvelo to any other scRNA-seq datasets:
 
-you can define a personalized name for the dataset, and simply add the following codes into the preprocess() function:
+you can define a personalized name for the dataset, and simply add the following codes into the preprocess() function in TFvelo_run_demo.py:
 ```
 if args.dataset_name == your_dataset_name:
   adata = ad.read_h5ad(your_h5ad_file_path)   
