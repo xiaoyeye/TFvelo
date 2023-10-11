@@ -5,7 +5,7 @@ This is the code of TFvelo: gene regulation inspired RNA velocity estimation.
 
 Due to the wide usage of scvelo and its clean, well-organized codes, we develop TFvelo based on the framework of scvelo. 
 
-In TFvelo, the gene regulatory relationship is taken into consideration for modeling the time derivetive of RNA abundance, which allows a more accurate phase portrait fitting for each gene.
+In TFvelo, the gene regulatory relationship is taken into consideration for modeling the time derivative of RNA abundance, which allows a more accurate phase portrait fitting for each gene.
 
 ![Image text](https://github.com/xiaoyeye/TFvelo/blob/main/figures/demo.png)
 
