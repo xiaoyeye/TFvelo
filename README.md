@@ -2,7 +2,9 @@
 
 
 This is the code of TFvelo:gene regulation inspired RNA velocity estimation.
+
 Due to the wide usage of scvelo and its clean, well-organized codes, we develop TFvelo based on the framework of scvelo. 
+
 In TFvelo, the gene regulatory relationship is taken into consideration for modeling the time derivetive of RNA abundance, which allows a more accurate phase portrait fitting for each gene.
 
 ![Image text](https://github.com/xiaoyeye/TFvelo/blob/main/figures/demo.png)
@@ -27,6 +29,7 @@ pip install typing_extensions
 
 ## Reproduce:
 Running the program with default parameters can reproduce the results in manuscript.
+
 To reproduce TFvelo on pancreas:
 ```
 python TFvelo_run_demo.py --dataset_name pancreas
@@ -44,6 +47,7 @@ The result will be stored in 'TFvelo_pancreas_demo/TFvelo.h5ad', and figures wil
 
 ## Usage:
 To apply TFvelo to other single cell data:
+
 you can define a personalized name for the dataset, and simply add the following codes into the preprocess() function:
 ```
 if args.dataset_name == your_dataset_name:
