@@ -1,7 +1,7 @@
 # TFvelo
 
 
-This is the code of TFvelo:gene regulation inspired RNA velocity estimation.
+This is the code of TFvelo: gene regulation inspired RNA velocity estimation.
 
 Due to the wide usage of scvelo and its clean, well-organized codes, we develop TFvelo based on the framework of scvelo. 
 
