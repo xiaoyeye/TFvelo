@@ -112,7 +112,7 @@ def main(args):
 if __name__ == '__main__':
     import argparse
     parser = argparse.ArgumentParser()
-    parser.add_argument( '--dataset_name', type=str, default="pancreas", help='pancreas, gastrulation_erythroid, 10x_mouse_brain, merfish, hesc1') 
+    parser.add_argument( '--dataset_name', type=str, default="pancreas", help='pancreas, gastrulation_erythroid, 10x_mouse_brain, hesc1') 
     parser.add_argument( '--n_jobs', type=int, default=28, help='number of cpus to use')
     parser.add_argument( '--var_names', type=str, default="all", help='all, highly_variable_genes')
     parser.add_argument( '--init_weight_method', type=str, default= "correlation", help='use correlation to initialize the weights')
