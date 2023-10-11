@@ -47,7 +47,7 @@ Then run the code with:
 python TFvelo_run_demo.py --dataset_name your_dataset_name
 python TFvelo_analysis_demo.py --dataset_name your_dataset_name
 ```
-As a result, all result files will be puted in the folder named: "TFvelo_"+your_data_name+"_demo". And figures will still be put in the folder "figures".
+As a result, all generated h5ad files will be puted in the folder named: "TFvelo_"+your_data_name+"_demo". And figures will be put in the folder "figures".
 
 Hyperparameters:
 --n_jobs: number of cpus to use
