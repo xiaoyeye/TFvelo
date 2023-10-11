@@ -38,7 +38,7 @@ Running the program with default parameters can reproduce the results in manuscr
 
 
 To apply TFvelo to other single cell data:
-you can define a personalized name for the dataset, and simply add the following code into the preprocess() function:
+you can define a personalized name for the dataset, and simply add the following codes into the preprocess() function:
 ```
 if args.dataset_name == your_dataset_name:
   adata = ad.read_h5ad(your_h5ad_file_path)   
