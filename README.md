@@ -5,7 +5,7 @@ This is the code of TFvelo, which is developed based on the implementation of sc
 
 
 Environment:
-'''
+```
 conda create -n TFvelo_env python=3.8.12
 pip install pandas==1.2.3 
 pip install anndata==0.8.0 
@@ -16,7 +16,7 @@ pip install numba==0.57.0
 pip install matplotlib==3.3.4
 pip install scvelo==0.2.4
 pip install typing_extensions
-'''
+```
 
 The demo dataset Pancreas can be load by:
 ```
