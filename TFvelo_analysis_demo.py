@@ -202,7 +202,7 @@ def main(args):
 if __name__ == '__main__':
     import argparse
     parser = argparse.ArgumentParser()
-    parser.add_argument( '--dataset_name', type=str, default="pancreas", help='pancreas, gastrulation_erythroid, 10x_mouse_brain, merfish, hesc1') 
+    parser.add_argument( '--dataset_name', type=str, default="pancreas", help='pancreas, gastrulation_erythroid, 10x_mouse_brain, hesc1') 
     parser.add_argument( '--layer', type=str, default="M_total", help='M_total, total') 
     parser.add_argument( '--basis', type=str, default="umap", help='umap, tsne, pca')
     parser.add_argument( '--loss_percent_thres', type=int, default=50, help='max loss of each gene')
