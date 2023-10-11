@@ -66,7 +66,7 @@ As a result, all generated h5ad files will be puted in the folder named: "TFvelo
 
 ## Hyperparameters:
 ```
---n_jobs: The number of cpus to use
+--n_jobs: The number of CPUs to use
 --init_weight_method: The method to initialize the weights. Correlation is adopted by default.
 --WX_method: The method to optimize weight. lsq_linear is adopted by default.
 --n_neighbors: The number of neighbors.
