@@ -37,13 +37,26 @@ Running the program with default parameters can reproduce the results in manuscr
 
 
 To apply TFvelo to other single cell data:
-you can define a personalized name for the dataset, and simply change the data loader in preprocess() function as:
+you can define a personalized name for the dataset, and simply add the following code into the preprocess() function:
 ```
 if args.dataset_name == your_dataset_name:
-  adata = ad.read_h5ad(h5ad_file_path)   
+  adata = ad.read_h5ad(your_h5ad_file_path)   
 ```
 Then run the code with:
 ```
 python TFvelo_run_demo.py --dataset_name your_dataset_name
+python TFvelo_analysis_demo.py --dataset_name your_dataset_name
 ```
-As a result, all result files will be puted in the folder named: "TFvelo_"+your_data_name+"_demo"
+As a result, all result files will be puted in the folder named: "TFvelo_"+your_data_name+"_demo". And figures will still be put in the folder "figures".
+
+Hyperparameters:
+--n_jobs: number of cpus to use
+--init_weight_method: the method to initialize the weights. Correlation is adopted by default.
+--WX_method: the method to optimize weight. lsq_linear is adopted by default.
+--n_neighbors: number of neighbors.
+--WX_thres: The max absolute value for weights.
+--TF_databases: The way to select candidate TFs. use ENCODE and ChEA by default.
+--max_n_TF: max number of TFs used for modeling each gene.
+--max_iter: max number of iterations in the generalized EM algorithm.
+--n_time_points: the number of time points in the time assinment (E step of the generalized EM algorithm). 
+--save_name: the name of folder which all generated files will be put in.
