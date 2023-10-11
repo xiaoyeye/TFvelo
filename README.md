@@ -31,7 +31,7 @@ After that, the visualization of results can be obtained by
 ```
 python TFvelo_analysis_demo.py --dataset_name pancreas
 ```
-The result will be stored in 'TFvelo_pancreas/TFvelo.h5ad', and figures will be put in folder 'figures'.
+The result will be stored in 'TFvelo_pancreas_demo/TFvelo.h5ad', and figures will be put in folder 'figures'.
 
 Running the program with default parameters can reproduce the results in manuscript.
 
