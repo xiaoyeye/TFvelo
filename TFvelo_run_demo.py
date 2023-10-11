@@ -75,10 +75,7 @@ def preprocess(args):
     adata.var_names_make_unique()
     adata.obs_names_make_unique()
 
-    if args.dataset_name == 'merfish':
-        TFv.pp.moments(adata, use_rep="X_pca", n_pcs=2, n_neighbors=args.n_neighbors)  # 30 
-    else:
-        TFv.pp.moments(adata, n_pcs=30, n_neighbors=args.n_neighbors)
+    TFv.pp.moments(adata, n_pcs=30, n_neighbors=args.n_neighbors)
 
     TFv.pp.get_TFs(adata, databases=args.TF_databases)
     print(adata)
