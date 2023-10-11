@@ -1,8 +1,11 @@
 # TFvelo
 
-![Image text](https://github.com/xiaoyeye/TFvelo/tree/main/figures/demo.png)
 
 This is the code of TFvelo, which is developed based on the implementation of scVelo. 
+
+![Image text](https://github.com/xiaoyeye/TFvelo/blob/main/figures/demo.png)
+
+
 TFvelo_run_demo.py provides the code for runing TFvelo, and TFvelo_analysis_demo.py is for results visualization. These code can be directly downloaded for usage.
 
 
