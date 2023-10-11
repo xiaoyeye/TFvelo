@@ -36,13 +36,6 @@ def get_pseudotime(adata):
     TFv.tl.velocity_graph(adata, basis=None, vkey='velocity', xkey='M_total')
     TFv.tl.velocity_pseudotime(adata, vkey='velocity', modality='M_total') 
     TFv.pl.scatter(adata, basis=args.basis, color='velocity_pseudotime', cmap='gnuplot', fontsize=20, save='pseudotime')
-    print(adata)
-
-    clusters = adata.obs['clusters'].cat.categories
-    for c in clusters:
-        root_c = (adata[adata.obs['clusters']==c, :].obs['root_cells']).mean()
-        end_c = (adata[adata.obs['clusters']==c, :].obs['end_points']).mean()
-        print(c, root_c, end_c)
     return adata
 
 
@@ -164,14 +157,12 @@ def main(args):
     
     adata_copy = adata.copy()
     adata_copy = get_sort_t(adata_copy) 
-    print(adata_copy)
+
     adata_copy_1 = adata_copy.copy()
     data_type_tostr(adata_copy_1)
-    adata_copy_1.write(args.data_path + 'rc.h5ad')
-    adata_copy_1 = ad.read_h5ad(args.data_path+"rc.h5ad") 
     print(adata_copy_1)
+    adata_copy_1.write(args.data_path + 'rc.h5ad')
 
- 
     thres_loss = np.percentile(adata_copy.var['min_loss'], args.loss_percent_thres) 
     adata_copy = adata_copy[:, adata_copy.var['min_loss'] < thres_loss]
 
@@ -183,7 +174,6 @@ def main(args):
 
     adata_copy = get_metric_pseudotime(adata_copy)
     adata_copy = adata_copy[:, adata_copy.var['spearmanr_pseudotime'] > args.spearmanr_thres] 
-    print(adata_copy.shape)
 
     TFv.tl.velocity_graph(adata_copy, basis=None, vkey='velocity', xkey='M_total')
     adata_copy.uns['clusters_colors'] = adata.uns['clusters_colors']
