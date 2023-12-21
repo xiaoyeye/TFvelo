@@ -3,7 +3,7 @@
 
 This is the code of TFvelo: gene regulation inspired RNA velocity estimation. Paper is avaliable at: [Li, J., Pan, X., Yuan, Y., & Shen, H. B. (2023). TFvelo: gene regulation inspired RNA velocity estimation. bioRxiv, 2023-07](https://doi.org/10.1101/2023.07.12.548785).
 
-Due to the wide usage of scvelo ([Bergen, Volker, et al. "Generalizing RNA velocity to transient cell states through dynamical modeling." Nature biotechnology 38.12 (2020): 1408-1414], link (https://scvelo.readthedocs.io/en/stable/)) and its clean, well-organized codes, we develop TFvelo based on the framework of scvelo. 
+Due to the wide usage of scvelo (Bergen, Volker, et al. "Generalizing RNA velocity to transient cell states through dynamical modeling." Nature biotechnology 38.12 (2020): 1408-1414, [link] (https://scvelo.readthedocs.io/en/stable/)) and its clean, well-organized codes, we develop TFvelo based on the framework of scvelo. 
 
 In TFvelo, the gene regulatory relationship is taken into consideration for modeling the time derivative of RNA abundance, which allows a more accurate phase portrait fitting for each gene.
 
