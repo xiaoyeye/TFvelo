@@ -77,3 +77,6 @@ As a result, all generated h5ad files will be puted in the folder named: "TFvelo
 --n_time_points: The number of time points in the time assinment (E step of the generalized EM algorithm). 
 --save_name: The name of folder which all generated files will be put in.
 ```
+
+## Baselines and metrics:
+The code for baselines and metrics are provided in the folder "baselines". You may need to create an environment and install the required packages for each baseline method.
