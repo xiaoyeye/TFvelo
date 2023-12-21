@@ -45,7 +45,7 @@ def get_sort_positions(arr):
     return positions_normed
 
 
-def get_metric_pseudotime(adata, t_key='normed_t_sort'):
+def get_metric_pseudotime(adata, t_key='latent_t'):
     n_cells, n_genes = adata.shape
     adata.var['spearmanr_pseudotime'] = 0.0
     for i in range(n_genes):
@@ -114,13 +114,8 @@ def get_sort_t(adata):
         normed_t[:,i] = tmp
         sort_t[:,i] = get_sort_positions(tmp)
 
-    adata.layers['fit_t_shift'] = t.copy() # x, ..., x+1
-    adata.layers['normed_t'] = normed_t.copy() # 0, ..., 1
-    adata.layers['normed_t_sort'] = sort_t.copy() # 0, 1/2000, 2/2000 ..., 1
-    adata.varm['hist_all'] = hist_all.copy()
-    adata.varm['bins_all'] = bins_all.copy()
+    adata.layers['latent_t'] = sort_t.copy() 
     adata.var['non_blank_gene'] = non_blank_gene.copy()
-    #adata = adata[:, adata.var['non_blank_gene']==0] 
     return adata
 
 
